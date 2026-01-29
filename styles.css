@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+body {
+  background: #f6f8fc;
+  padding: 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid #c7d2fe;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  color: #1d2b6f;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #667085;
+  max-width: 600px;
+  margin: auto;
+}
+
+.header input {
+  margin-top: 20px;
+  padding: 10px 18px;
+  width: 260px;
+  border-radius: 20px;
+  border: 1px solid #c7d2fe;
+}
+
+.layout {
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card-img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width:800px) {
+  .card-img img {
+    height: 100%;
+
+  }
+}
+.compact img{
+  height: 100%;
+}
+.featured .body {
+  padding: 18px;
+}
+
+.featured h3 {
+  color: #1d2b6f;
+  margin-bottom: 10px;
+}
+
+.featured a {
+  color: #2563eb;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.meta {
+  margin-top: 12px;
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: #667085;
+}
+
+.compact {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+}
+
+.compact .img {
+  height: 100%;
+}
+
+.compact .body {
+  padding: 12px;
+}
+
+.compact h4 {
+  color: #1d2b6f;
+  margin-bottom: 6px;
+}
+
+.compact span {
+  font-size: 12px;
+  color: #667085;
+}
+
+@media (max-width: 767px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+  }
+
+  .featured .img {
+    height: auto;
+  }
+
+    .side-list {
+        display: contents;
+    }
+  .meta {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .layout {
+    display: flex;
+    
+  }
+
+  .featured {
+    grid-column: span 3;
+  }
+
+  .featured .img {
+    height: 220px;
+  }
+
+  .side-list {
+    display: contents;
+  }
+
+  .compact {
+    grid-template-columns: 1fr;
+  }
+
+  .compact .img {
+    height: 160px;
+  }
+}
+
+/* 🖥 DESKTOP */
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .side-list {
+    display: grid;
+    gap: 20px;
+  }
+}
+@media (min-width:800px) {
+    .header input {
+        display: none;
+    }
+}
